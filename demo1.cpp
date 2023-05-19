@@ -1,11 +1,11 @@
 ﻿// demo1.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 
 
-int demo14_1();// 函数的声明！！
+int demo15();// 函数的声明！！
 
 int main(int artc, char** argv)
 {
-	return demo14_1();
+	return demo15();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
