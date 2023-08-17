@@ -7,14 +7,14 @@ using namespace std;
 摄像头人脸追踪
 */
 CascadeClassifier faceDetector;
-String haar_data_file = "D:\\opencv\\path\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_alt2.xml";
+String haar_data_file = "D:\\opencv\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_alt2.xml";
 //https://zhuanlan.zhihu.com/p/100217697
 int demo2() {
 	Mat frame, gray;
 	vector<Rect> faces;
 	VideoCapture capture(0);
 	faceDetector.load(haar_data_file);
-	namedWindow("frame", WINDOW_AUTOSIZE);
+	//namedWindow("frame", WINDOW_AUTOSIZE);
 	while (true) {
 		capture.read(frame);
 		flip(frame, frame, 1);//镜像一下，
@@ -28,6 +28,8 @@ int demo2() {
 		if (c == 27) {
 			return 0;
 		}
+		namedWindow("frame", 0);// 1.定义窗口名
+		resizeWindow("frame", 320, 240);// 2.定义窗口初始化大小
 		imshow("frame", frame);
 	}
 

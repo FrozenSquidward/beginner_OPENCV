@@ -71,8 +71,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\opencv\path\opencv\build\include;D:\opencv\path\opencv\build\x64\vc15\bin;$(IncludePath)</IncludePath>
-    <ReferencePath>D:\opencv\path\opencv\build\x64\vc15\bin;$(LibraryPath)</ReferencePath>
+    <IncludePath>D:\opencv\opencv\build\include;D:\opencv\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <ReferencePath>$(LibraryPath)</ReferencePath>
+    <LibraryPath>D:\opencv\opencv\build\x64\vc15\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,13 +109,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\opencv\path\opencv\build\x64\vc15\bin</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\opencv\opencv\build\x64\vc15\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opencv_world460d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\opencv\path\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\opencv\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,6 +143,9 @@
     <ClCompile Include="demo14.cpp" />
     <ClCompile Include="demo15.cpp" />
     <ClCompile Include="demo2.cpp" />
+    <ClCompile Include="demo20.cpp" />
+    <ClCompile Include="demo21.cpp" />
+    <ClCompile Include="demo22.cpp" />
     <ClCompile Include="demo3.cpp" />
     <ClCompile Include="demo4.cpp" />
     <ClCompile Include="demo5.cpp" />

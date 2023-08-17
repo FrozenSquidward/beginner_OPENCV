@@ -9,7 +9,8 @@ using namespace cv;
 int demo13() 
 {
     // Reading image
-    Mat img = imread("Resources/test.jpg");
+    //Mat img = imread("Resources/test.jpg");
+    Mat img = imread("Resources/ab.png");
     // Display original image
     imshow("original Image", img);
     waitKey(0);

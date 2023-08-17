@@ -25,6 +25,8 @@ void demo3() {
 	//此函数还接受两个参数：
 	//第一个参数是将在窗口上显示的窗口名称。
 	//第二个参数是要显示的图像。
+	namedWindow("color image", 0);// 1.定义窗口名
+	resizeWindow("color image", 320, 240);// 2.定义窗口初始化大小
 	imshow("color image", img_color);
 	// 3.要一次显示多个图像，请为要显示的每个图像指定新的窗口名称。
 	imshow("grayscale image", img_grayscale);
